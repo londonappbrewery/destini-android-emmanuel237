@@ -61,5 +61,10 @@ public class MainActivity extends AppCompatActivity {
             mButtonAnswer1.setText(mCurrentBranch.getAns1TextId());
             mButtonAnswer2.setText(mCurrentBranch.getAns2TextId());
         }
+        else
+        {
+            mButtonAnswer1.setVisibility(View.GONE);
+            mButtonAnswer2.setVisibility(View.GONE);
+        }
     }
 }
