@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         mButtonAnswer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int nextBranch = mCurrentBranch.getAns1NextBranchId() - 1;
-                if ( nextBranch > 0)
-                    mCurrentBranch = mStory[nextBranch];
+
+                if ( mCurrentBranch.getAns1NextBranchId() > 0 )
+                    mCurrentBranch = mStory[mCurrentBranch.getAns1NextBranchId() - 1];
                 updateStoryDisplay();
             }
         });
@@ -46,13 +46,11 @@ public class MainActivity extends AppCompatActivity {
         mButtonAnswer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int nextBranch = mCurrentBranch.getAns2NextBranchId() - 1;
-                if( nextBranch > 0)
-                    mCurrentBranch = mStory[nextBranch];
+                if( mCurrentBranch.getAns2NextBranchId() > 0)
+                    mCurrentBranch = mStory[mCurrentBranch.getAns2NextBranchId() - 1];
                 updateStoryDisplay();
             }
         });
-
 
 
     }
